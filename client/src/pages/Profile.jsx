@@ -16,8 +16,11 @@ const Profile = () => {
   });
 
   const user = data?.me || data?.user || {};
-  // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+  if (
+    Auth.loggedIn() && 
+    /* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username, and compare it to the userParam variable */
+    Auth.getProfile().authenticatedPerson.username === userParam
+  ) {
     return <Navigate to="/me" />;
   }
 

@@ -24,12 +24,12 @@ const ThoughtForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const { data } = await addThought({
         variables: {
           thoughtText,
-          thoughtAuthor: Auth.getProfile().data.username,
+          // Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username 
+          thoughtAuthor: Auth.getProfile().authenticatedPerson.username
         },
       });
 
