@@ -7,20 +7,15 @@ const typeDefs = `
     thoughts: [Thought]!
   }
 
-  type Thought {
+  type Event {
     _id: ID
-    thoughtText: String
-    thoughtAuthor: String
+    title: String
+    date: String
     createdAt: String
     comments: [Comment]!
   }
 
-  type Comment {
-    _id: ID
-    commentText: String
-    commentAuthor: String
-    createdAt: String
-  }
+  
 
   type Auth {
     token: ID!
