@@ -9,12 +9,14 @@ const Header = () => {
   };
   return (
     <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <div>
-          <Link className="text-light" to="/">
-            <h1 className="m-0">Tech Thoughts</h1>
+      <div className="main-login">
+        <div className="header-logo">
+          <Link to="/">
+            <h1 className="m-0">Chronos</h1>
           </Link>
-          <p className="m-0">Get into the mind of a programmer.</p>
+        </div>
+        <div className='header-sub'>
+          <h2>A Simple Calendar App</h2>
         </div>
         <div>
           {Auth.loggedIn() ? (
@@ -29,12 +31,14 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+            <div className='login-signup'>
+              <Link className="login-btn" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="signup-btn" to="/signup">
                 Signup
               </Link>
+            </div>
             </>
           )}
         </div>
