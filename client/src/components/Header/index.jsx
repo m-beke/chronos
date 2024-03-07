@@ -9,14 +9,11 @@ const Header = () => {
   };
   return (
     <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="main-login">
+      <div className="header-login">
         <div className="header-logo">
           <Link to="/">
             <h1 className="m-0">Chronos</h1>
           </Link>
-        </div>
-        <div className='header-sub'>
-          <h2>A Simple Calendar App</h2>
         </div>
         <div>
           {Auth.loggedIn() ? (
