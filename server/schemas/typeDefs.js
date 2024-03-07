@@ -4,7 +4,7 @@ const typeDefs = `
     username: String
     email: String
     password: String
-    thoughts: [Thought]!
+    events: [Event]!
   }
 
   type Event {
@@ -12,11 +12,10 @@ const typeDefs = `
     title: String
     date: String
     createdAt: String
-    comments: [Comment]!
+   
   }
 
   
-
   type Auth {
     token: ID!
     user: User
@@ -25,18 +24,17 @@ const typeDefs = `
   type Query {
     users: [User]
     user(username: String!): User
-    thoughts(username: String): [Thought]
-    thought(thoughtId: ID!): Thought
+    events(username: String): [Event]
+    event(eventId: ID!): Event
     me: User
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addThought(thoughtText: String!): Thought
-    addComment(thoughtId: ID!, commentText: String!): Thought
-    removeThought(thoughtId: ID!): Thought
-    removeComment(thoughtId: ID!, commentId: ID!): Thought
+    addEvent(eventText: String!): Event
+    removeEvent(eventId: ID!): Event
+  
   }
 `;
 
