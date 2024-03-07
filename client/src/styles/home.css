@@ -1,8 +1,13 @@
 
 .home-login {
-    background-color: black;
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .9);
     padding: 30px;
-    margin-top: 30%;
+    margin-top:10%;
+    margin-left:35%;
+    margin-right: 35%;
+    border-radius: 5%;
   }
   
   .home-logo a {
