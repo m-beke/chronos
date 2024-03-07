@@ -7,33 +7,21 @@ body {
   justify-content: center;
 }
 
-.main-login {
+.header-login {
   background-color: black;
-  padding: 30px;
-  margin-top: 30%;
+  display: flex;
+  justify-content: space-between;
+  
 }
 
-.header-logo a {
+.header-logo a{
   font-family: "Caesar Dressing", system-ui;
-  display: flex;
-  justify-content: center;
   color: white;
   text-decoration: none;
-  font-size: 60px;
 }
 
 .header-logo a:visited {
-  color: white;
   text-decoration: none;
-}
-
-.header-sub {
-  font-family: "Aboreto", system-ui;
-  color: white;
-  display: flex;
-  justify-content: center;
-  margin-top: -100px;
-  margin-bottom: 50px;
 }
 
 .login-signup {
@@ -53,7 +41,6 @@ body {
   
 }
 
-.login-signup a:visited {
+.ogin-signup a:visited {
   text-decoration: none;
 }
-
