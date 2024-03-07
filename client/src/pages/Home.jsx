@@ -1,4 +1,24 @@
 import { useQuery } from '@apollo/client';
+ events
+
+import EventList from '../components/EventList';
+import EventForm from '../components/EventForm';
+
+import { QUERY_EVENTS } from '../utils/queries';
+
+const Home = () => {
+  const { loading, data } = useQuery(QUERY_EVENTS);
+  const events = data?.events || [];
+
+  return (
+    <main>
+      {/* <div className="flex-row justify-center">
+        <div
+          className="col-12 col-md-10 mb-3 p-3"
+          style={{ border: '1px dotted #1a1a1a' }}
+        >
+          <EventForm />
+
 import { Link } from 'react-router-dom';
 import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
@@ -23,6 +43,7 @@ const Home = () => {
         </div>
         <div className='home-sub'>
           <h2>A Simple Calendar App</h2>
+ main
         </div>
         <div>
           {Auth.loggedIn() ? (
@@ -36,6 +57,12 @@ const Home = () => {
               </button>
             </>
           ) : (
+             events
+            <EventList
+              events={events}
+              title="Some Feed for Event(s)..."
+            />
+
             <>
             <div className='home-login-signup'>
               <Link className="home-login-btn" to="/login">
@@ -46,6 +73,7 @@ const Home = () => {
               </Link>
             </div>
             </>
+             main
           )}
         </div>
       </div>
