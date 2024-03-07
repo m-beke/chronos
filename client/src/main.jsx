@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         path: '/thoughts/:thoughtId',
         element: <SingleThought />
       },{
-        path: '/calender',
+        path: '/calendar',
         element: <MyCalendar />
       }
 
