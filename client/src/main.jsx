@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         path: '/events/:eventtId',
         element: <SingleEvent />
       },{
-        path: '/calender',
+        path: '/calendar',
         element: <MyCalendar />
       }
 

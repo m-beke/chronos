@@ -44,3 +44,12 @@ body {
 .login-signup a:visited {
   text-decoration: none;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer button {
+  display: flex;
+}
