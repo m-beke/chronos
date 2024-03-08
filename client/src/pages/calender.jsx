@@ -4,10 +4,10 @@ import "react-calendar/dist/Calendar.css";
 import "./MyCalendar.css";
 
 function MyCalendar() {
-  const [date, setDate] = useState(new Date());
-  const [eventName, setEventName] = useState("");
+  const [eventDate, setDate] = useState(new Date());
+  const [eventTitle, setEventName] = useState("");
   const [events, setEvents] = useState([]);
-  const [time, setTime] = useState("");
+  const [eventTime, setTime] = useState("");
 
   const onChange = (selectedDate) => {
     setDate(selectedDate);
@@ -70,7 +70,7 @@ function MyCalendar() {
         <input type="text" placeholder="Event Name" onChange={onChangeEvent} />
         <input type="datetime-local" onChange={onChangeTime} />
         <button
-          onClick={() => addEvent({ date: date, name: eventName, time: time })}
+          onClick={() => addEvent({ eventDate: eventDate, eventTitle: eventTitle, eventTime: eventTime })}
         >
           Add Event
         </button>

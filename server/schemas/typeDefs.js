@@ -9,9 +9,9 @@ const typeDefs = `
 
   type Event {
     _id: ID
-    title: String
-    date: String
-    createdAt: String
+    eventTitle: String
+    eventDate: String
+    eventTime: String
    
   }
 
@@ -32,7 +32,7 @@ const typeDefs = `
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addEvent(eventText: String!): Event
+    addEvent(eventTitle: String!, eventDate: String, eventTime: String): Event
     removeEvent(eventId: ID!): Event
   
   }
