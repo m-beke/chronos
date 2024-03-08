@@ -2,44 +2,39 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./MyCalendar.css";
-
 function MyCalendar() {
-  const [eventDate, setDate] = useState(new Date());
-  const [eventTitle, setEventName] = useState("");
+  const [eventDate, setEventDate] = useState(new Date());
+  const [eventTitle, setEventTitle] = useState("");
   const [events, setEvents] = useState([]);
-  const [eventTime, setTime] = useState("");
-
+  const [eventTime, setEventTime] = useState("");
   const onChange = (selectedDate) => {
-    setDate(selectedDate);
+    setEventDate(selectedDate);
     console.log(selectedDate);
   };
   const onChangeTime = (e) => {
     let time = new Date(e.target.value);
     let string = time.getHours() + ":" + time.getMinutes();
-    setTime(string);
+    setEventTime(string);
     console.log(string);
   };
-
   const onChangeEvent = (e) => {
-    setEventName(e.target.value);
+    setEventTitle(e.target.value);
     console.log(e.target.value);
   };
-
-  const addEvent = (event) => {
-    setEvents([...events, event]);
+  const addEvent = () => {
+    const newEvent = { eventDate, eventTitle, eventTime };
+    setEvents([...events, newEvent]);
     console.log(events);
   };
-
   const getEventsForDate = (date) => {
     return events.filter((event) => {
       return (
-        event.date.getFullYear() === date.getFullYear() &&
-        event.date.getMonth() === date.getMonth() &&
-        event.date.getDate() === date.getDate()
+        event.eventDate.getFullYear() === date.getFullYear() &&
+        event.eventDate.getMonth() === date.getMonth() &&
+        event.eventDate.getDate() === date.getDate()
       );
     });
   };
-
   const tileContent = ({ date, view }) => {
     if (view === "month") {
       const eventsForDate = getEventsForDate(date);
@@ -48,19 +43,18 @@ function MyCalendar() {
       ) : null;
     }
   };
-
   return (
     <div className="myCalendar">
       <h1 className="text-center">My Calendar</h1>
       <div className="calendar-container">
-        <Calendar onChange={onChange} value={date} tileContent={tileContent} />
+        <Calendar onChange={onChange} value={eventDate} tileContent={tileContent} />
       </div>
       <div className="events-container">
-        <h2>Events for {date.toDateString()}</h2>
+        <h2>Events for {eventDate.toDateString()}</h2>
         <ul>
-          {getEventsForDate(date).map((event, index) => (
+          {getEventsForDate(eventDate).map((event, index) => (
             <li key={index}>
-              {event.time} - {event.name}
+              {event.eventTime} - {event.eventTitle}
             </li>
           ))}
         </ul>
@@ -69,14 +63,9 @@ function MyCalendar() {
         <h2>Add Event</h2>
         <input type="text" placeholder="Event Name" onChange={onChangeEvent} />
         <input type="datetime-local" onChange={onChangeTime} />
-        <button
-          onClick={() => addEvent({ eventDate: eventDate, eventTitle: eventTitle, eventTime: eventTime })}
-        >
-          Add Event
-        </button>
+        <button onClick={addEvent}>Add Event</button>
       </div>
     </div>
   );
 }
-
 export default MyCalendar;
