@@ -32,11 +32,14 @@ const Signup = () => {
         variables: { ...formState },
       });
 
-      Auth.login(data.addUser.token);
+      if (data.addUser.token) {
+        Auth.login(data.addUser.token);
+      }
     } catch (e) {
       console.error(e);
     }
   };
+
 
   return (
     <main className="signup-form">

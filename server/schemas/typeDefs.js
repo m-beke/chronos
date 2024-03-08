@@ -36,6 +36,6 @@ const typeDefs = `
     removeEvent(eventId: ID!): Event
     editEvent(eventTitle: String!, eventDate: String, eventTime: String): Event
   }
-`;
+`
 
 module.exports = typeDefs;
