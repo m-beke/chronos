@@ -67,9 +67,9 @@ const EventForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="eventText"
+                name="eventTitle"
                 placeholder="Put your idea ..."
-                value={eventText}
+                value={eventTitle}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
