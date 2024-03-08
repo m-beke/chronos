@@ -34,7 +34,7 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
     addEvent(eventTitle: String!, eventDate: String, eventTime: String): Event
     removeEvent(eventId: ID!): Event
-  
+    editEvent(eventTitle: String!, eventDate: String, eventTime: String): Event
   }
 `;
 
