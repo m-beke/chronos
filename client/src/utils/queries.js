@@ -6,10 +6,10 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
+      events {
         _id
-        thoughtText
-        createdAt
+        eventTitle
+        eventDate
       }
     }
   }
@@ -19,9 +19,9 @@ export const QUERY_EVENTS = gql`
   query getEvents {
     events {
       _id
-      eventText
-      eventAuthor
-      createdAt
+      eventTitle
+      eventDate
+      eventTime
     }
   }
 `;
@@ -30,10 +30,9 @@ export const QUERY_SINGLE_EVENT = gql`
   query getSingleEvent($eventId: ID!) {
     event(eventId: $eventId) {
       _id
-      eventText
-      eventAuthor
-      createdAt
-      
+      eventTitle
+      eventDate
+      eventTime
     }
   }
 `;
@@ -45,10 +44,9 @@ export const QUERY_ME = gql`
       username
       email
       events {
-        _id
-        eventText
-        eventAuthor
-        createdAt
+        eventTitle
+        eventDate
+        eventTime
       }
     }
   }
