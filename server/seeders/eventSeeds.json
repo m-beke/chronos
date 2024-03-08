@@ -1,103 +1,241 @@
 [
   {
-    "_id": "1",
-    "title": "Event 1",
-    "date": "2024-03-07",
-    "createdAt": "2024-03-07T10:00:00Z",
-    "comments": [
-      {
-        "_id": "101",
-        "text": "This is a comment for Event 1",
-        "createdAt": "2024-03-07T10:05:00Z"
-      },
-      {
-        "_id": "102",
-        "text": "Another comment for Event 1",
-        "createdAt": "2024-03-07T10:10:00Z"
-      }
-    ]
+    "eventTitle": "Annual Charity Gala",
+    "eventDate": "03/15/2024",
+    "eventTime": "18:00"
   },
   {
-    "_id": "2",
-    "title": "Event 2",
-    "date": "2024-03-08",
-    "createdAt": "2024-03-07T11:00:00Z",
-    "comments": [
-      {
-        "_id": "201",
-        "text": "Comment for Event 2",
-        "createdAt": "2024-03-07T11:05:00Z"
-      }
-    ]
+    "eventTitle": "Tech Conference Keynote",
+    "eventDate": "03/20/2024",
+    "eventTime": "09:30"
   },
   {
-    "_id": "3",
-    "title": "Event 3",
-    "date": "2024-03-09",
-    "createdAt": "2024-03-07T12:00:00Z",
-    "comments": []
+    "eventTitle": "Art Exhibition Opening Reception",
+    "eventDate": "03/10/2024",
+    "eventTime": "17:00"
   },
   {
-    "_id": "4",
-    "title": "Event 4",
-    "date": "2024-03-10",
-    "createdAt": "2024-03-07T13:00:00Z",
-    "comments": []
+    "eventTitle": "Music Festival Day 1",
+    "eventDate": "03/05/2024",
+    "eventTime": "12:00"
   },
   {
-    "_id": "5",
-    "title": "Event 5",
-    "date": "2024-03-11",
-    "createdAt": "2024-03-07T14:00:00Z",
-    "comments": []
+    "eventTitle": "Community Clean-Up Day",
+    "eventDate": "03/03/2024",
+    "eventTime": "09:00"
   },
   {
-    "_id": "6",
-    "title": "Event 6",
-    "date": "2024-03-12",
-    "createdAt": "2024-03-07T15:00:00Z",
-    "comments": []
+    "eventTitle": "Food Truck Festival",
+    "eventDate": "03/08/2024",
+    "eventTime": "16:30"
   },
   {
-    "_id": "7",
-    "title": "Event 7",
-    "date": "2024-03-13",
-    "createdAt": "2024-03-07T16:00:00Z",
-    "comments": []
+    "eventTitle": "Fashion Show",
+    "eventDate": "03/12/2024",
+    "eventTime": "19:00"
   },
   {
-    "_id": "8",
-    "title": "Event 8",
-    "date": "2024-03-14",
-    "createdAt": "2024-03-07T17:00:00Z",
-    "comments": []
+    "eventTitle": "Startup Pitch Competition",
+    "eventDate": "03/22/2024",
+    "eventTime": "10:00"
   },
   {
-    "_id": "9",
-    "title": "Event 9",
-    "date": "2024-03-15",
-    "createdAt": "2024-03-07T18:00:00Z",
-    "comments": []
+    "eventTitle": "Film Premiere",
+    "eventDate": "03/17/2024",
+    "eventTime": "20:00"
   },
   {
-    "_id": "10",
-    "title": "Event 10",
-    "date": "2024-03-16",
-    "createdAt": "2024-03-07T19:00:00Z",
-    "comments": []
+    "eventTitle": "Book Launch Party",
+    "eventDate": "03/05/2024",
+    "eventTime": "18:30"
   },
   {
-    "_id": "11",
-    "title": "Event 11",
-    "date": "2024-03-17",
-    "createdAt": "2024-03-07T20:00:00Z",
-    "comments": []
+    "eventTitle": "Fitness Workshop",
+    "eventDate": "03/14/2024",
+    "eventTime": "15:00"
   },
   {
-    "_id": "12",
-    "title": "Event 12",
-    "date": "2024-03-18",
-    "createdAt": "2024-03-07T21:00:00Z",
-    "comments": []
+    "eventTitle": "Cooking Class",
+    "eventDate": "03/20/2024",
+    "eventTime": "11:00"
+  },
+  {
+    "eventTitle": "TEDx Talk",
+    "eventDate": "03/28/2024",
+    "eventTime": "14:00"
+  },
+  {
+    "eventTitle": "Environmental Awareness Seminar",
+    "eventDate": "03/10/2024",
+    "eventTime": "10:30"
+  },
+  {
+    "eventTitle": "Children's Theater Performance",
+    "eventDate": "03/15/2024",
+    "eventTime": "16:00"
+  },
+  {
+    "eventTitle": "Business Networking Mixer",
+    "eventDate": "03/20/2024",
+    "eventTime": "18:30"
+  },
+  {
+    "eventTitle": "Gaming Tournament",
+    "eventDate": "03/22/2024",
+    "eventTime": "13:00"
+  },
+  {
+    "eventTitle": "Photography Workshop",
+    "eventDate": "03/05/2024",
+    "eventTime": "11:30"
+  },
+  {
+    "eventTitle": "Live Music Concert",
+    "eventDate": "03/18/2024",
+    "eventTime": "20:00"
+  },
+  {
+    "eventTitle": "Educational Webinar",
+    "eventDate": "03/12/2024",
+    "eventTime": "09:00"
+  },
+  {
+    "eventTitle": "Craft Beer Tasting",
+    "eventDate": "03/08/2024",
+    "eventTime": "17:00"
+  },
+  {
+    "eventTitle": "Dance Performance Showcase",
+    "eventDate": "03/25/2024",
+    "eventTime": "19:30"
+  },
+  {
+    "eventTitle": "Robotics Expo",
+    "eventDate": "03/19/2024",
+    "eventTime": "10:00"
+  },
+  {
+    "eventTitle": "Artisan Market",
+    "eventDate": "03/14/2024",
+    "eventTime": "12:00"
+  },
+  {
+    "eventTitle": "Sustainable Living Panel Discussion",
+    "eventDate": "03/05/2024",
+    "eventTime": "15:30"
+  },
+  {
+    "eventTitle": "Fitness Retreat",
+    "eventDate": "03/09/2024",
+    "eventTime": "08:00"
+  },
+  {
+    "eventTitle": "Virtual Reality Experience Showcase",
+    "eventDate": "03/20/2024",
+    "eventTime": "14:00"
+  },
+  {
+    "eventTitle": "Culinary Tour",
+    "eventDate": "03/28/2024",
+    "eventTime": "11:00"
+  },
+  {
+    "eventTitle": "Outdoor Adventure Club Meeting",
+    "eventDate": "03/15/2024",
+    "eventTime": "17:30"
+  },
+  {
+    "eventTitle": "Fashion Design Workshop",
+    "eventDate": "03/10/2024",
+    "eventTime": "16:00"
+  },
+  {
+    "eventTitle": "Science Fair",
+    "eventDate": "03/19/2024",
+    "eventTime": "09:00"
+  },
+  {
+    "eventTitle": "Street Art Festival",
+    "eventDate": "03/25/2024",
+    "eventTime": "12:00"
+  },
+  {
+    "eventTitle": "Wine Tasting and Pairing Event",
+    "eventDate": "03/12/2024",
+    "eventTime": "19:00"
+  },
+  {
+    "eventTitle": "Comedy Show",
+    "eventDate": "03/08/2024",
+    "eventTime": "20:00"
+  },
+  {
+    "eventTitle": "Hiking Excursion",
+    "eventDate": "03/14/2024",
+    "eventTime": "07:00"
+  },
+  {
+    "eventTitle": "Entrepreneurship Workshop",
+    "eventDate": "03/18/2024",
+    "eventTime": "14:30"
+  },
+  {
+    "eventTitle": "Health and Wellness Expo",
+    "eventDate": "03/29/2024",
+    "eventTime": "10:00"
+  },
+  {
+    "eventTitle": "Film Screening followed by Q&A",
+    "eventDate": "03/21/2024",
+    "eventTime": "18:30"
+  },
+  {
+    "eventTitle": "Gardening Club Meeting",
+    "eventDate": "03/15/2024",
+    "eventTime": "16:00"
+  },
+  {
+    "eventTitle": "Music Production Masterclass",
+    "eventDate": "03/08/2024",
+    "eventTime": "13:00"
+  },
+  {
+    "eventTitle": "Yoga and Meditation Retreat",
+    "eventDate": "03/20/2024",
+    "eventTime": "09:00"
+  },
+  {
+    "eventTitle": "Educational Puppet Show for Kids",
+    "eventDate": "03/18/2024",
+    "eventTime": "11:00"
+  },
+  {
+    "eventTitle": "Blockchain Technology Seminar",
+    "eventDate": "03/10/2024",
+    "eventTime": "15:00"
+  },
+  {
+    "eventTitle": "Cultural Diversity Celebration",
+    "eventDate": "03/27/2024",
+    "eventTime": "17:00"
+  },
+  {
+    "eventTitle": "Crafting Workshop",
+    "eventDate": "03/19/2024",
+    "eventTime": "19:30"
   }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+

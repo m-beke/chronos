@@ -47,13 +47,16 @@ const resolvers = {
 
       return { token, user };
     },
-    addEvent: async (parent, { eventText }, context) => {
+    addEvent: async (parent, { eventTitle, eventDate, eventTime }, context) => {
+      // Use the logged in users info
       if (context.user) {
+        // Create the event in the event collection
         const event = await Event.create({
-          eventText,
-          eventAuthor: context.user.username,
+          eventTitle,
+          eventDate,
+          eventTime,
         });
-
+        // Update the user with the newly created event
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { events: event._id } }
@@ -63,20 +66,14 @@ const resolvers = {
       }
       throw AuthenticationError;
     },
-    
-        
-      
+
+
+
     removeEvent: async (parent, { eventId }, context) => {
       if (context.user) {
-        constevent = await Event.findOneAndDelete({
+        const event = await Event.findOneAndDelete({
           _id: eventId,
-          eventAuthor: context.user.username,
         });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { events: event._id } }
-        );
 
         return event;
       }
@@ -84,7 +81,7 @@ const resolvers = {
     },
   },
 };
-  
+
 
 
 module.exports = resolvers;
