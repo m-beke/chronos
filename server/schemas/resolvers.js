@@ -79,8 +79,39 @@ const resolvers = {
       }
       throw AuthenticationError;
     },
+    editEvent: async (parent, { eventId, eventTitle, eventDate, eventTime }, context) => {
+      if (context.user) {
+        // you can find the event id
+        const event = await Event.findById(eventId);
+
+        
+        if (!event) {
+          throw new Error('Event not found');
+        }
+
+        
+        if (event.userId.toString() !== context.user._id.toString()) {
+          throw new AuthenticationError('You are not authorized to edit this event');
+        }
+
+        // updates the event with new data
+        event.eventTitle = eventTitle;
+        event.eventDate = eventDate;
+        event.eventTime = eventTime;
+
+        // Save the updated event
+        await event.save();
+
+        return event;
+      }
+      throw new AuthenticationError('You must be logged in to edit an event');
+    },
   },
 };
+
+
+  
+
 
 
 
