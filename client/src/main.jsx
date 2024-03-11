@@ -10,6 +10,8 @@ import SingleEvent from './pages/SingleEvent';
 import Profile from './pages/Profile';
 import Error from './pages/Error';
 import MyCalendar from './pages/calender.jsx';
+import AboutUs from './pages/AboutUs.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,9 @@ const router = createBrowserRouter([
       },{
         path: '/calendar',
         element: <MyCalendar />
+      },{
+        path: '/AboutUs',
+        element: <AboutUs />
       }
 
     ]
