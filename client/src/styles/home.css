@@ -1,5 +1,5 @@
 
-.home-login {
+.home-card {
     display:flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, .9);
@@ -36,7 +36,7 @@
   .home-login-signup {
     font-family: "Cormorant Garamond", serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-size: 40px;
     font-weight: bold;
   }

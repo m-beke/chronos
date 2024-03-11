@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div>
       <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-        <div className="home-login">
+        <div className="home-card">
           <div className="home-logo">
             <Link to="/">
               <h1 className="m-0">Chronos</h1>

@@ -1,27 +1,40 @@
 import React from 'react';
+import "../styles/aboutus.css";
 
 function AboutUs() {
   return (
-    <div className="about-us">
-      <h2 className="about-us-heading">About Us</h2>
-      <div className="about-us-content">
-      < p>Welcome everyone to our calendar app, 
-      where you can schedule anything that you might forget. And if you want to communicate with us.
-      here is our github links.</p>
-      <a href="https://github.com/m-beke"> Matthew Beke </a>
-
-      <a href="https://github.com/kvnhunt"> Kevin Hunt </a>
-
-      <a href="https://github.com/Shawki45/"> Shawki Haifa </a>
-
-      < a href="https://github.com/DDesta25/"> Daniel Desta </a>
-      
-
-     
+    <>
+      <div className="about-us">
+        <h2 className="about-us-heading">About Us</h2>
       </div>
-      </div> 
-    
+      <div className='card-display'>
+      <div className="about-us-card">
+        <h2>Matthew Beke</h2>
+        <a href="https://github.com/m-beke">GitHub</a>
+        <a href="">Portfolio</a>
+        <a href="">LinkedIn</a>
+      </div>
+      <div className="about-us-card">
+        <h2>Kevin Hunt</h2>
+        <a href="https://github.com/kvnhunt">GitHub</a>
+        <a href="">Portfolio</a>
+        <a href="">LinkedIn</a>
+      </div>
+      <div className="about-us-card">
+        <h2>Shawki Haifa</h2>
+        <a href="https://github.com/Shawki45/">GitHub</a>
+        <a href="">Portfolio</a>
+        <a href="">LinkedIn</a>
+      </div>
+      <div className="about-us-card">
+        <h2>Daniel Desta</h2>
+        <a href="https://github.com/DDesta25/">GitHub</a>
+        <a href="">Portfolio</a>
+        <a href="">LinkedIn</a>
+      </div>
+      </div>
+    </>
   );
-}; 
-  
+};
+
 export default AboutUs;
