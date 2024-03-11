@@ -1,11 +1,11 @@
-.myCalendar {
+/* .myCalendar {
   max-width: 400px;
   max-height: 400px;
   background-color: white;
   border: 2px solid black;
-}
+} */
 
-.myCalendar { 
+ .myCalendar { 
   width: 400px;
   max-width: 100%;
   background-color: #fff;
@@ -35,7 +35,7 @@
  /* .react-calendar__month-view__days__day--weekend {
   color: #d10000;
  } */
- .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:hover,
  .react-calendar__tile:enabled:focus {
   background: #ababe9;
   color: #5b38ce;
@@ -100,4 +100,4 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background-color: #5298B3;
- }
+ } */  */
