@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
@@ -15,6 +16,16 @@ const Header = () => {
             <h1 className="m-0">Chronos</h1>
           </Link>
         </div>
+        <div>
+        <ul className="header-nav">
+            <li className="nav-item">
+              <Link to="aboutus" className="nav-link">
+                About Us
+              </Link>
+            </li>
+          </ul>
+          </div>
+        
         <div>
           {Auth.loggedIn() ? (
             <>
