@@ -44,10 +44,10 @@ const SingleEvent = () => {
       </div>
 
       <div className="my-5">
-        <CommentList comments={event.comments} />
+        <EventList comments={event.comments} />
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <CommentForm eventId={event._id} />
+        <EventForm eventId={event._id} />
       </div>
     </div>
   );
