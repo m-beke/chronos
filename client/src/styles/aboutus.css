@@ -1,0 +1,56 @@
+.about-us {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .about-us-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-content {
+    margin-top: 20px;
+  }
+  
+  .about-us-content p {
+    margin-bottom: 10px;
+  }
+  
+  .github-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .github-links li {
+    margin-bottom: 5px;
+  }
+  
+  .github-links a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .github-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .about-us-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .about-us-button:hover {
+    background-color: #0056b3;
+  }
+  

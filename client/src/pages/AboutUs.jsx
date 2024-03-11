@@ -7,16 +7,21 @@ function AboutUs() {
       <div className="about-us-content">
       < p>Welcome everyone to our calendar app, 
       where you can schedule anything that you might forget. And if you want to communicate with us.
-      here is our github links.
-      <a href="https://github.com/m-beke">GitHub</a>
-      <a href="https://github.com/kvnhunt">GitHub</a>
-      <a href="https://github.com/Shawki45/">GitHub</a>
-      < a href="https://github.com/DDesta25/">Github</a>
-      </p>
-      <button classname="about-us-button">Learn More</button>
+      here is our github links.</p>
+      <a href="https://github.com/m-beke"> Matthew Beke </a>
+
+      <a href="https://github.com/kvnhunt"> Kevin Hunt </a>
+
+      <a href="https://github.com/Shawki45/"> Shawki Haifa </a>
+
+      < a href="https://github.com/DDesta25/"> Daniel Desta </a>
+      
+
+     
       </div>
-    </div>
+      </div> 
+    
   );
-  };  
+}; 
   
 export default AboutUs;

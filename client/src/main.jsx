@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path: '/calendar',
         element: <MyCalendar />
       },{
-        path: '/AboutUs',
+        path: '/aboutus',
         element: <AboutUs />
       }
 
