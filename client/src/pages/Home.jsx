@@ -30,12 +30,9 @@ const Home = () => {
           <div>
             {Auth.loggedIn() ? (
               <>
-                <Link className="btn btn-lg btn-info m-2" to="/me">
-                  {Auth.getProfile().authenticatedPerson.username}'s profile
+                <Link className="calendar-btn" to="/Calendar">
+                  View Calendar
                 </Link>
-                <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                  Logout
-                </button>
               </>
             ) : (
               <>
@@ -53,7 +50,7 @@ const Home = () => {
         </div>
       </header>
 
-      <main>
+      {/* <main>
         <div className="flex-row justify-center">
           <div
             className="col-12 col-md-10 mb-3 p-3"
@@ -69,7 +66,7 @@ const Home = () => {
             style={{ border: "1px dotted #1a1a1a" }}
           ></div>
         </div>
-      </main>
+      </main> */}
     </div>
   );
 };

@@ -25,7 +25,7 @@
   }
   
   .home-sub {
-    font-family: "Aboreto", system-ui;
+    font-family: "Cormorant Garamond", serif;
     color: white;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@
   }
   
   .home-login-signup {
-    font-family: "Aboreto", system-ui;
+    font-family: "Cormorant Garamond", serif;
     display: flex;
     justify-content: space-between;
     font-size: 40px;
@@ -52,5 +52,17 @@
   
   .home-login-signup a:visited {
     text-decoration: none;
+  }
+
+  .calendar-btn {
+    display: flex;
+    justify-content: center;
+    background-color: #FBC450;
+    color: black;
+    font-family: "Cormorant Garamond", serif;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
   }
   

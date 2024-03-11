@@ -22,18 +22,18 @@
 }
 
 .form-input {
-    font-family: "Aboreto", system-ui;
+    font-family: "Cormorant Garamond", serif;
 }
 
 .card-body p {
     color: white;
-    font-family: "Aboreto", system-ui;
+    font-family: "Cormorant Garamond", serif;
     font-weight: bold;
     
 }
 
 button {
-    font-family: "Aboreto", system-ui;
+    font-family: "Cormorant Garamond", serif;
     font-weight: bold;
     background-color: #FBC450;
     color: black;
