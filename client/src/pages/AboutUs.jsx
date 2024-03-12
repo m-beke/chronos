@@ -18,18 +18,18 @@ function AboutUs() {
         <h2>Kevin Hunt</h2>
         <a href="https://github.com/kvnhunt">GitHub</a>
         <a href="">Portfolio</a>
-        <a href="">LinkedIn</a>
+        <a href="http://www.linkedin.com/in/kevin-hunt-6752ab2ab">LinkedIn</a>
       </div>
       <div className="about-us-card">
         <h2>Shawki Haifa</h2>
         <a href="https://github.com/Shawki45/">GitHub</a>
-        <a href="">Portfolio</a>
-        <a href="">LinkedIn</a>
+        <a href="https://guileless-choux-0adb76.netlify.app/">Portfolio</a>
+        <a href="https://www.linkedin.com/in/shawki-haifa-ab02b32ab/">LinkedIn</a>
       </div>
       <div className="about-us-card">
         <h2>Daniel Desta</h2>
         <a href="https://github.com/DDesta25/">GitHub</a>
-        <a href="">Portfolio</a>
+        <a href="https://destadanielportfolio.netlify.app/">Portfolio</a>
         <a href="">LinkedIn</a>
       </div>
       </div>
