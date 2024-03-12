@@ -71,7 +71,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="login-submit"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >

@@ -2,7 +2,7 @@ body {
   background-image: url('../src/assets/images/chronos_bg.jfif');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
   margin: 0px;
 }
 
@@ -27,19 +27,45 @@ body {
   text-decoration: none;
 }
 
+.header-logo a:hover {
+  color: #FBC450;
+  text-shadow: 0 0 8px white;
+}
+
+.nav-btn {
+  display: flex;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
 .user-link {
   font-family: "Cormorant Garamond", serif;
   font-weight: bold;
   background-color: #FBC450;
   color: black;
   text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
   padding: 13px;
   border-radius: 10px;
   margin-right: 30px;
-  
+  border: 2px solid black;
+}
+
+.user-link a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.user-link:hover {
+  text-decoration: underline;
+  box-shadow: 0px 0px 10px 5px white;
 }
 
 .login-signup {
+  display: flex;
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   font-weight: bold;
@@ -52,7 +78,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   margin-right: 30px;
-  
+  border: 2px solid black;
 }
 
 .login-signup a:visited {
@@ -60,19 +86,25 @@ body {
   
 }
 
-.about-link {
-  background-color: #FBC450;
-  color: black;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: "Cormorant Garamond", serif;
+.login-signup a:hover {
+  text-decoration: underline;
+  box-shadow: 0px 0px 10px 5px white;
+}
+
+.logout-btn {
+  font-size: 20px;
   font-weight: bold;
 }
 
-.about-link a:visited {
-  color: black;
-  text-decoration: none;
+
+.back-btn {
+  font-size: 18px;
+}
+
+button:hover {
+  text-decoration: underline;
+  box-shadow: 0px 0px 10px 5px white;
+  cursor: pointer;
 }
 
 footer {
