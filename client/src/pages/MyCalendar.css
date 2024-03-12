@@ -20,7 +20,7 @@
   max-width: 1000px; 
   margin: 2% auto; 
   background-color: rgba(0, 0, 0, 0.9);
-  color: white;
+  color: black;
   border-radius: 8px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   font-family: "Cormorant Garamond", serif;
@@ -30,6 +30,11 @@
 
 .myCalendar h1 {
   font-family: "Caesar Dressing", system-ui;
+  color: white;
+}
+
+.myCalendar h2 {
+  color: white;
 }
 
  .react-calendar__navigation button {
