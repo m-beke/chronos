@@ -17,33 +17,34 @@ const Header = () => {
           </Link>
         </div>
         <div className='nav-btn'>
-        <div className='user-link'>
-          <Link to="aboutus" className="nav-link">
-            About Us
-          </Link>
-        </div>
-        {Auth.loggedIn() ? (
-          <>
-            <Link className="user-link" to="/me">
-              {/* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username  */}
-              {Auth.getProfile().authenticatedPerson.username}'s Profile
+          {Auth.loggedIn() ? (
+            <>
+              <h2 className="user-link">
+                {/* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username  */}
+                Hello, {Auth.getProfile().authenticatedPerson.username}!
+              </h2>
+              <button className="logout-btn" onClick={logout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <div className='login-signup'>
+                <Link className="login-btn" to="/login">
+                  Login
+                </Link>
+                <Link className="signup-btn" to="/signup">
+                  Signup
+                </Link>
+              </div>
+
+            </>
+          )}
+          <div className='about-btn'>
+            <Link to="aboutus" className="nav-link">
+              About Us
             </Link>
-            <button className="logout-btn" onClick={logout}>
-              Logout
-            </button>
-          </>
-        ) : (
-          <>
-            <div className='login-signup'>
-              <Link className="login-btn" to="/login">
-                Login
-              </Link>
-              <Link className="signup-btn" to="/signup">
-                Signup
-              </Link>
-            </div>
-          </>
-        )}
+          </div>
         </div>
       </div>
     </header>
