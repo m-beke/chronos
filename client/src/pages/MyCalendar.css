@@ -17,20 +17,26 @@
  } */
  .myCalendar {
   width: 100%; 
-  max-width: 800px; 
-  margin: 0 auto; 
-  background-color: #fff;
-  color: #222;
+  max-width: 1000px; 
+  margin: 2% auto; 
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
   border-radius: 8px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
   line-height: 4.125em;
 }
+
+.myCalendar h1 {
+  font-family: "Caesar Dressing", system-ui;
+}
+
  .react-calendar__navigation button {
-  color: #6f48eb;
+  color: black;
   min-width: 44px;
   background: none;
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 8px;
  }
  .react-calendar__navigation button:enabled:hover,
@@ -48,22 +54,22 @@
  } */
   .react-calendar__tile:enabled:hover,
  .react-calendar__tile:enabled:focus {
-  background: #ababe9;
-  color: #5b38ce;
+  background: #FBC450;
+  color: black;
   border-radius: 6px;
  }
  .react-calendar__tile--now {
-  background: #6f48eb33;
+  background: #4595B6;
   border-radius: 6px;
   font-weight: bold;
-  color: #6f48eb;
+  color: white;
  }
  .react-calendar__tile--now:enabled:hover,
  .react-calendar__tile--now:enabled:focus {
   background: #5298B3;
   border-radius: 6px;
   font-weight: bold;
-  color: #5298B3;
+  color: white;
  }
  .react-calendar__tile--hasActive:enabled:hover,
  .react-calendar__tile--hasActive:enabled:focus {
@@ -77,8 +83,8 @@
  }
  .react-calendar__tile--active:enabled:hover,
  .react-calendar__tile--active:enabled:focus {
-  background: #6f48eb;
-  color: white;
+  background: #FBC450;
+  color: black;
  }
  .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: #f8f8fa;
@@ -101,8 +107,8 @@
   border-bottom-left-radius: 0;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  background: #6f48eb;
-  color: white;
+  background: #FBC450;
+  color: black;
  }
 
  .text-center {
@@ -110,7 +116,6 @@
   border-bottom-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  background-color: #5298B3;
  } 
  .react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after {
   -moz-box-sizing: border-box;
