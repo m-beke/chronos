@@ -30,7 +30,7 @@ function AboutUs() {
         <h2>Daniel Desta</h2>
         <a href="https://github.com/DDesta25/">GitHub</a>
         <a href="https://destadanielportfolio.netlify.app/">Portfolio</a>
-        <a href="">LinkedIn</a>
+        <a href="http://www.linkedin.com/in/daniel-desta-4117b2212">LinkedIn</a>
       </div>
       </div>
     </>

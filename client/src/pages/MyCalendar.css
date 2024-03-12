@@ -65,7 +65,7 @@
  } */
   .react-calendar__tile:enabled:hover,
  .react-calendar__tile:enabled:focus {
-  background: #FBC450;
+  background: #FEE5AF;
   color: black;
   border-radius: 6px;
  }
