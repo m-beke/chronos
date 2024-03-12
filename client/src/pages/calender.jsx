@@ -14,11 +14,11 @@ function MyCalendar() {
   const { loading, data } = useQuery(QUERY_ME);
   const user = data?.me || {};
 
-  useEffect(() => {
-    if (user) {
-      setEvents(user.events);
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user) {
+  //     setEvents(user.events);
+  //   }
+  // }, [user]);
 
   const [addEvent, { error }] = useMutation(ADD_EVENT);
   // const [removeEventsForDateMutation] = useMutation(REMOVE_EVENTS_FOR_DATE);
@@ -42,10 +42,12 @@ function MyCalendar() {
       const { data } = await addEvent({
         variables: { ...newEvent },
       });
+      console.log(data);
       setEventTitle("");
       setEventTime("");
+      data?.addEvent ? setEvents([...events, data.addEvent]) : setEvents([...events])
       if (data.addEvent) {
-        setEvents([...events, data.addEvent]);
+        console.log(events);
       }
     } catch (error) {
       console.log(error);
@@ -88,17 +90,17 @@ function MyCalendar() {
 
   const tileContent = ({ date, view }) => {
     events.map((event) => {
-      // console.log (`event date is ${event.eventDate.getDate()} and the date is ${date.getDate()}`)
+      console.log (`event date is ${event.eventDate.getDate()} and the date is ${date.getDate()}`)
        if (event.eventDate === date){        
           return event.eventTitle      
       }
     });
-    //   const eventsForDate = getEventsForDate(date);
-    //   return eventsForDate.length > 0 ? (
-    //     <p>{eventsForDate.length} event(s)</p>
-    //   ) : null;
-    // }
+      const eventsForDate = getEventsForDate(date);
+      return eventsForDate.length > 0 ? (
+        <p>{eventsForDate.length} event(s)</p>
+      ) : null;
     };
+    
 
   return (
     <div className="myCalendar">
