@@ -18,7 +18,7 @@ body {
 
 .header-logo a{
   font-family: "Caesar Dressing", system-ui;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   text-decoration: none;
 }
@@ -41,6 +41,12 @@ body {
 }
 
 .user-link {
+  color: white;
+  font-family: "Cormorant Garamond", serif;
+  padding-right: 20px;
+}
+
+.about-btn {
   font-family: "Cormorant Garamond", serif;
   font-weight: bold;
   background-color: #FBC450;
@@ -48,18 +54,17 @@ body {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  padding: 13px;
+  padding: 20px;
   border-radius: 10px;
-  margin-right: 30px;
   border: 2px solid black;
 }
 
-.user-link a:visited {
+.about-btn a:visited {
   color: black;
   text-decoration: none;
 }
 
-.user-link:hover {
+.about-btn:hover {
   text-decoration: underline;
   box-shadow: 0px 0px 10px 5px white;
 }
@@ -75,9 +80,9 @@ body {
   background-color: #FBC450;
   color: black;
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
-  margin-right: 30px;
+  margin-right: 10px;
   border: 2px solid black;
 }
 
@@ -92,8 +97,11 @@ body {
 }
 
 .logout-btn {
+  display: flex;
   font-size: 20px;
   font-weight: bold;
+  padding: 20px;
+  margin-right: 10px;
 }
 
 
