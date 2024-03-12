@@ -11,8 +11,8 @@ function AboutUs() {
       <div className="about-us-card">
         <h2>Matthew Beke</h2>
         <a href="https://github.com/m-beke">GitHub</a>
-        <a href="">Portfolio</a>
-        <a href="">LinkedIn</a>
+        <a href="https://mbeke.netlify.app/">Portfolio</a>
+        <a href="https://www.linkedin.com/in/matt-beke-a3679740/">LinkedIn</a>
       </div>
       <div className="about-us-card">
         <h2>Kevin Hunt</h2>

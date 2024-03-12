@@ -16,29 +16,24 @@ const Header = () => {
             <h1 className="m-0">Chronos</h1>
           </Link>
         </div>
-        <div>
-        <ul className="header-nav">
-            <li className="nav-item">
-              <Link to="aboutus" className="nav-link">
-                About Us
-              </Link>
-            </li>
-          </ul>
-          </div>
-        
-        <div>
-          {Auth.loggedIn() ? (
-            <>
-              <Link className="user-link" to="/me">
-                {/* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username  */}
-                {Auth.getProfile().authenticatedPerson.username}'s Profile
-              </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
+        <div className='nav-btn'>
+        <div className='user-link'>
+          <Link to="aboutus" className="nav-link">
+            About Us
+          </Link>
+        </div>
+        {Auth.loggedIn() ? (
+          <>
+            <Link className="user-link" to="/me">
+              {/* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username  */}
+              {Auth.getProfile().authenticatedPerson.username}'s Profile
+            </Link>
+            <button className="logout-btn" onClick={logout}>
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
             <div className='login-signup'>
               <Link className="login-btn" to="/login">
                 Login
@@ -47,8 +42,8 @@ const Header = () => {
                 Signup
               </Link>
             </div>
-            </>
-          )}
+          </>
+        )}
         </div>
       </div>
     </header>
