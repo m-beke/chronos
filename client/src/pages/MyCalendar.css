@@ -39,7 +39,7 @@
 
 .myCalendar li {
   color: white;
-  font-size: 18px;
+  font-size: 20px;
 }
 
  .react-calendar__navigation button {
@@ -52,7 +52,7 @@
  }
  .react-calendar__navigation button:enabled:hover,
  .react-calendar__navigation button:enabled:focus {
-  background-color: #cccccc;
+  background: #FBC450;
  }
  .react-calendar__navigation button[disabled] {
   background-color: #f0f0f0;
@@ -84,7 +84,8 @@
  }
  .react-calendar__tile--hasActive:enabled:hover,
  .react-calendar__tile--hasActive:enabled:focus {
-  background: #f8f8fa;
+  background: #FBC450;
+  color: black;
  }
  .react-calendar__tile--active {
   background: #5298B3;
@@ -134,4 +135,8 @@
   box-sizing: border-box;
   line-height: unset;
   width: unset;
+}
+
+.add-event-form input {
+  margin-right: 10px;
 }
