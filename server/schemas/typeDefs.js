@@ -33,7 +33,7 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addEvent(eventTitle: String!, eventDate: String, eventTime: String): Event
-    removeEvent(eventId: ID!): Event
+    deleteEvent(eventId: ID!): Event
     editEvent(eventTitle: String!, eventDate: String, eventTime: String): Event
   }
 `

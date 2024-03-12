@@ -33,10 +33,13 @@ export const ADD_EVENT = gql`
 
 export const DELETE_EVENT = gql`
   mutation deleteEvent($eventId: ID!) {
-    deleteEvent(eventId: $eventId) {
-      _id
-    }
+  deleteEvent(eventId: $eventId) {
+    _id
+    eventTitle
+    eventDate
+    eventTime
   }
+}
 `;
 
 export const UPDATE_USER = gql`
@@ -79,3 +82,11 @@ mutation login($email: String!, $password: String!) {
   }
 }
 `;
+
+export const REMOVE_EVENTS_FOR_DATE = gql`
+mutation RemoveEventsForDate($date: String!) {
+  removeEventsForDate(date: $date) {
+    success
+    message
+  }
+}`;
