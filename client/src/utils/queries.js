@@ -44,6 +44,7 @@ export const QUERY_ME = gql`
       username
       email
       events {
+        _id
         eventTitle
         eventDate
         eventTime
