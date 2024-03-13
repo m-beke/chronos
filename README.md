@@ -7,7 +7,12 @@ Chronos is a simple calendar app designed for creating, planning, and tracking e
 
 ## Installation
 
-N/A
+React,
+React Calendar,
+Vite,
+GraphQl,
+Apollo/Client
+
 
 ## Usage
 
@@ -21,6 +26,82 @@ Once on your calendar page, you can select the date, month, and year from the da
 
 Vite, LogRocket, W3 Schools, MDN Web Docs, Stack Overflow, with special thanks to our instructors John and Mary!
 
-## License
+## Collaborate with your team
 
-Please refer to the LICENSE in the repo.
+https://github.com/m-beke
+Matthew Beke
+
+https://github.com/DDesta25
+Daniel Desta
+
+https://github.com/Shawki45
+Shawki Hafia
+
+
+https://github.com/KvnHunt
+Kevin Hunt
+
+## License
+This project is licensed under the MIT license.
+
+See LICENSE.txt for more information.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+### Local Installation / Testing
+
+
+1. Clone the rep
+
+```
+git clone [https://github.com/m-beke/chronos.git](git@github.com:m-beke/chronos.git)
+```
+
+2. Install dependencies
+
+```
+npm run install
+```
+
+3. Seed the database
+
+```
+npm run seed
+```
+
+4. Launch the app in development environments
+
+```
+npm run develop
+```
+
+5. Visit:
+
+[localhost://]()
+
+## Render Deployment
+
+https://chronos-b9mn.onrender.com
+
+#### MVP
+
+<!-- This is a nested check-box that displays a nice checked or unchecked list on your Github repo to show your visitor's a quick road map! -->
+
+- [ ] Front End(client)
+
+  - [ ] User Auth
+  - [ ] User Profile Page
+    - [ ] Routing
+    - [ ] Styling
+  - [ ] Landing Page
+    - [ ] Routing
+    - [ ] Styling
+
+- [ ] Back End (server)
+  - [ ] Models
+  - [ ] Seeds
+  - [ ] Schemas
+  - [ ] utils
+  - [ ] Server.js
+ 
