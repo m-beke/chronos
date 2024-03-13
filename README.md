@@ -11,7 +11,7 @@ N/A
 
 ## Usage
 
-To use the app, please visit this link: [Link]. 
+To use the app, please visit this [Link.](https://chronos-b9mn.onrender.com) 
 
 From there, you must use the sign up button to create an account, or log in if you already have one. After that, you can click the "View Calendar" button to be taken to your calendar. 
 
