@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./MyCalendar.css";
-import { ADD_EVENT, REMOVE_EVENTS_FOR_DATE, DELETE_EVENT } from "../utils/mutations";
+import {
+  ADD_EVENT,
+  REMOVE_EVENTS_FOR_DATE,
+  DELETE_EVENT,
+} from "../utils/mutations";
 import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_ME } from "../utils/queries";
 
@@ -15,9 +19,7 @@ function MyCalendar() {
   const user = data?.me || {};
 
   useEffect(() => {
-    if (user) {
-      setEvents(user.events);
-    }
+    user?.events ? setEvents(user.events) : console.log("noEvents");
   }, [user]);
 
   const [addEvent, { error }] = useMutation(ADD_EVENT);
@@ -42,10 +44,14 @@ function MyCalendar() {
       const { data } = await addEvent({
         variables: { ...newEvent },
       });
+      console.log(data);
       setEventTitle("");
       setEventTime("");
+      data?.addEvent
+        ? setEvents([...events, data.addEvent])
+        : setEvents([...events]);
       if (data.addEvent) {
-        setEvents([...events, data.addEvent]);
+        console.log(events);
       }
     } catch (error) {
       console.log(error);
@@ -53,10 +59,9 @@ function MyCalendar() {
   };
 
   const deleteOldEvent = async (index) => {
-
     try {
       const eventId = events[index]._id;
-      console.log(eventId, "this is eventID")
+      console.log(eventId, "this is eventID");
       await deleteEvent({ variables: { eventId: eventId } });
       setEvents((prevEvents) => {
         return prevEvents.filter((event, i) => i !== index);
@@ -75,36 +80,48 @@ function MyCalendar() {
   // };
 
   const getEventsForDate = (date) => {
-    
-    return events?.filter((event) => {
-      const eventDate = new Date(event.eventDate);
-      return (
-        eventDate.getFullYear() === date.getFullYear() &&
-        eventDate.getMonth() === date.getMonth() &&
-        eventDate.getDate() === date.getDate()
-      );
-    }) || [];
+    return (
+      events?.map((event) => {
+        
+        return (
+          eventDate.getFullYear() === date.getFullYear() &&
+          eventDate.getMonth() === date.getMonth() &&
+          eventDate.getDate() === date.getDate()
+        );
+      }) || []
+    );
   };
 
   const tileContent = ({ date, view }) => {
+    console.log(date, view);
+    console.log(events);
     events.map((event) => {
+      // const eventDate = new Date(event.eventDate.split(' at ')[0].split(',').join(''));
+      console.log(eventDate.toDateString());
+      console.log(new Date(date).toDateString());
       // console.log (`event date is ${event.eventDate.getDate()} and the date is ${date.getDate()}`)
-       if (event.eventDate === date){        
-          return event.eventTitle      
+      if (event.eventDate === date) {
+        // return event.eventTitle;
+        console.log("thisWorks");
       }
+      const eventsForDate = getEventsForDate(date);
+      
+      
+      return event.eventDate == date  ? (
+        <p>{eventsForDate.length} event(s)</p>
+      ) : null;
     });
-    //   const eventsForDate = getEventsForDate(date);
-    //   return eventsForDate.length > 0 ? (
-    //     <p>{eventsForDate.length} event(s)</p>
-    //   ) : null;
-    // }
-    };
+  };
 
   return (
     <div className="myCalendar">
       <h1 className="text-center">My Calendar</h1>
       <div className="calendar-container">
-        <Calendar onChange={onChange} value={eventDate} tileContent={tileContent} />
+        <Calendar
+          onChange={onChange}
+          value={eventDate}
+          tileContent={tileContent}
+        />
       </div>
       <div className="events-container">
         <h2>Events for {eventDate.toDateString()}</h2>
@@ -112,25 +129,28 @@ function MyCalendar() {
           {events && events.length > 0 ? (
             events.map((event, index) => (
               <li key={index}>
-                
                 {event.eventTime} - {event.eventTitle} - {event.eventDate}
                 <button onClick={() => deleteOldEvent(index)}>Delete</button>
               </li>
             ))
           ) : (
             <li>No events found</li>
-          )
-          }
+          )}
         </ul>
       </div>
       <div className="add-event-form">
         <h2>Add Event</h2>
-        <input type="text" placeholder="Event Name" value={eventTitle} onChange={onChangeEvent} />
+        <input
+          type="text"
+          placeholder="Event Name"
+          value={eventTitle}
+          onChange={onChangeEvent}
+        />
         <input type="time" value={eventTime} onChange={onChangeTime} />
         <button onClick={addNewEvent}>Add Event</button>
       </div>
     </div>
   );
-};
+}
 
 export default MyCalendar;
