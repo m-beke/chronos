@@ -124,7 +124,8 @@ function MyCalendar() {
         />
       </div>
       <div className="events-container">
-        <h2>Events for {eventDate.toDateString()}</h2>
+        {/* <h2>Events for {eventDate.toDateString()}</h2> */}
+        <h2>Your Upcoming Events</h2>
         <ul>
           {events && events.length > 0 ? (
             events.map((event, index) => (
