@@ -9,7 +9,8 @@ import {
 } from "../utils/mutations";
 import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_ME } from "../utils/queries";
-
+ 
+ // This would be the main function for the calendar which manages the events and the calendar itself.
 function MyCalendar() {
   const [eventDate, setEventDate] = useState(new Date());
   const [eventTitle, setEventTitle] = useState("");
@@ -17,6 +18,7 @@ function MyCalendar() {
   const [eventTime, setEventTime] = useState("");
   const { loading, data } = useQuery(QUERY_ME);
   const user = data?.me || {};
+
 
   useEffect(() => {
     user?.events ? setEvents(user.events) : console.log("noEvents");
@@ -26,6 +28,9 @@ function MyCalendar() {
   // const [removeEventsForDateMutation] = useMutation(REMOVE_EVENTS_FOR_DATE);
   const [deleteEvent] = useMutation(DELETE_EVENT);
 
+// The onchange updates the state of the date.
+// The onChangeTime updates the state of the time.
+// The onChangeEvent updates the state of the event.
   const onChange = (selectedDate) => {
     setEventDate(selectedDate);
   };
@@ -38,6 +43,7 @@ function MyCalendar() {
     setEventTitle(e.target.value);
   };
 
+  // The addNewEvent is the function that updates the events state
   const addNewEvent = async () => {
     try {
       const newEvent = { eventDate, eventTitle, eventTime };
@@ -57,7 +63,7 @@ function MyCalendar() {
       console.log(error);
     }
   };
-
+// The deleteOldEvent deletes the event
   const deleteOldEvent = async (index) => {
     try {
       const eventId = events[index]._id;
@@ -78,7 +84,7 @@ function MyCalendar() {
   //     console.log(error);
   //   }
   // };
-
+// This function filters the events based on the specific date and it would return the array of the events
   const getEventsForDate = (date) => {
     return (
       events?.map((event) => {
@@ -91,7 +97,7 @@ function MyCalendar() {
       }) || []
     );
   };
-
+//  The tileContent function shows the number of events in the specific date. 
   const tileContent = ({ date, view }) => {
     console.log(date, view);
     console.log(events);
@@ -113,6 +119,7 @@ function MyCalendar() {
     });
   };
 
+//  This would return the functional component which renders the calendar of the list events and the event form
   return (
     <div className="myCalendar">
       <h1 className="text-center">My Calendar</h1>
